@@ -31,78 +31,23 @@
 
     // :: 2.0 Nav Active Code
     if ($.fn.classyNav) {
-        $('#vizewNav').classyNav();
+        $('#menu-navbar').classyNav();
     }
 
-    // :: 3.0 Newsticker Active Code
-    // if ($.fn.simpleTicker) {
-    //     $.simpleTicker($("#breakingNewsTicker"), {
-    //         speed: 1000,
-    //         delay: 3000,
-    //         easing: 'swing',
-    //         effectType: 'roll'
-    //     });
-    // }
+    
 
     // :: 4.0 Sticky Active Code
     if ($.fn.sticky) {
-        $("#sticker").sticky({
+        $("#main-menu").sticky({
             topSpacing: 0
         });
     }
 
-    // :: 5.0 Sliders Active Code
-    // if ($.fn.owlCarousel) {
-    //     $('.twitter-slides').owlCarousel({
-    //         items: 1,
-    //         margin: 0,
-    //         loop: true,
-    //         dots: false,
-    //         autoplay: true,
-    //         autoplayTimeout: 4000,
-    //         smartSpeed: 1000
-    //     });
-
-    //     $('.featured-post-slides').owlCarousel({
-    //         items: 1,
-    //         margin: 0,
-    //         loop: true,
-    //         nav: true,
-    //         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-    //         dots: false,
-    //         autoplay: true,
-    //         autoplayTimeout: 4000,
-    //         smartSpeed: 1000
-    //     });
-
-    //     $('.sport-video-slides').owlCarousel({
-    //         items: 1,
-    //         margin: 0,
-    //         loop: true,
-    //         nav: true,
-    //         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-    //         dots: false,
-    //         autoplay: true,
-    //         autoplayTimeout: 4000,
-    //         smartSpeed: 1000
-    //     });
-
-    //     $('.business-video-slides').owlCarousel({
-    //         items: 1,
-    //         margin: 0,
-    //         loop: true,
-    //         nav: true,
-    //         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-    //         dots: false,
-    //         autoplay: true,
-    //         autoplayTimeout: 4000,
-    //         smartSpeed: 1000
-    //     });
-    // }
+  
 
     // :: 6.0 Nicescroll Active Code
     if ($.fn.niceScroll) {
-        $(".vizew-nav-tab").niceScroll({
+        $(".nav-tab").niceScroll({
             cursorcolor: "#838586",
             cursorwidth: "6px",
             cursorborder: 'none'
@@ -110,12 +55,12 @@
     }
 
     // :: 7.0 ScrollUp Active Code
-    // if ($.fn.scrollUp) {
-    //     browserWindow.scrollUp({
-    //         scrollSpeed: 1500,
-    //         scrollText: '<i class="ti-angle-up"></i>'
-    //     });
-    // }
+    if ($.fn.scrollUp) {
+        browserWindow.scrollUp({
+            scrollSpeed: 1500,
+            scrollText: '<i class="ti-angle-up"></i>'
+        });
+    }
 
     // :: 8.0 Tooltip Active Code
     if ($.fn.tooltip) {
@@ -136,8 +81,8 @@
     });
 
     // :: 11.0 Wow Active Code
-    // if (browserWindow.width() > 767) {
-    //     new WOW().init();
-    // }
+    if (browserWindow.width() > 767) {
+        new WOW().init();
+    }
 
 })(jQuery);

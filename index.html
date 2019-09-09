@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vizew</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="plugins/owl-oarousel2-2.3.4/assets/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/owl-oarousel2-2.3.4/assets/owl.carousel.min.css"> 
 
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+        <div class="preloader d-flex align-items-center justify-content-center">
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+
+
     <header class="header-area">
         <div class="top-header-area">
             <div class="container">
@@ -70,7 +83,7 @@
         <div class="header-main-menu" id="main-menu">
             <div class="menu-nav-container light left breakpoint-off ">
                 <div class="container">
-                    <nav class="menu-navbar">
+                    <nav class="menu-navbar" id="menu-navbar">
                         <a href="#" class="nav-logo">
                             <img src="img/core-img/logo.png" alt="">
                         </a>
@@ -161,6 +174,7 @@
                             </div>
                         </div>
                     </nav>
+                    
                 </div>
 
             </div>
@@ -444,7 +458,7 @@
         </div>
     </section>
 
-    <!-- section trending -->
+    <!-- section 2 trending -->
     <section class="trending-video section-s">
         <div class="container">
             <div class="row">
@@ -1590,11 +1604,20 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="plugins/owl-oarousel2-2.3.4/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    
+
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
     <script src="js/custom.js"></script>
 
 

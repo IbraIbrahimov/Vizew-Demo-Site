@@ -15,11 +15,32 @@
     font-size: 16px;
     font-weight: 400;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .vizew-breadcrumb .breadcrumb .breadcrumb-item {
+      font-size: 14px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .vizew-breadcrumb .breadcrumb .breadcrumb-item {
+      font-size: 14px; } }
+  @media only screen and (max-width: 767px) {
+    .vizew-breadcrumb .breadcrumb .breadcrumb-item {
+      font-size: 12px; } }
+
 .vizew-breadcrumb .breadcrumb .breadcrumb-item a {
     color: #fff;
     font-size: 16px;
     font-weight: 400;
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .vizew-breadcrumb .breadcrumb .breadcrumb-item a {
+      font-size: 14px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .vizew-breadcrumb .breadcrumb .breadcrumb-item a {
+      font-size: 14px; } }
+  @media only screen and (max-width: 767px) {
+    .vizew-breadcrumb .breadcrumb .breadcrumb-item a {
+      font-size: 12px; } }
+
 .vizew-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
     content: "\f105";
     font-family: fontawesome;
@@ -71,6 +92,12 @@
     position: relative;
     z-index: 1;
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .pagination {
+      margin-bottom: 80px; } }
+  @media only screen and (max-width: 767px) {
+    .pagination {
+      margin-bottom: 80px; } }
 .pagination .page-item .page-link {
     background-color: #393c3d;
     min-width: 40px;
