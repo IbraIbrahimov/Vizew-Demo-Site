@@ -85,4 +85,44 @@
     //     new WOW().init();
     // }
 
+$(".burger-menu").click(function(event){
+
+    var btn=$(event.currentTarget);
+    var toggler=$(btn).find('.navbar-toggler');
+    var classyMenu=$('.classy-menu');
+    
+
+if($(toggler).hasClass('active')){
+    $(toggler).removeClass('active');
+    $(classyMenu).removeClass('menu-on');
+    
+    
+}
+else{
+    $(toggler).addClass('active');
+    $(classyMenu).addClass('menu-on');
+    
+
+   
+
+}
+
+})
+
+$(window).resize(function(e) {
+    //974
+    let bodyWidth=parseInt($(document.body).css('width').replace('px',''));
+    var menuNavContainer=$('.menu-nav-container');
+
+    if(bodyWidth<=974){ 
+        $(menuNavContainer).addClass('breakpoint-on');
+       $(menuNavContainer).removeClass('breakpoint-off');      
+    }
+    else{
+        $(menuNavContainer).addClass('breakpoint-off');
+        $(menuNavContainer).removeClass('breakpoint-on');     
+    }    
+  });
+
 })(jQuery);
+  

@@ -559,6 +559,23 @@ body {
   width: 30px;
   transition-duration: 0.3s;
 }
+
+.burger-menu .navbar-toggler.active span:nth-of-type(1){
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+      transform: rotate3d(0, 0, 1, 45deg);
+      top: 8px;}
+
+      .burger-menu .navbar-toggler.active span:nth-of-type(2){
+        opacity: 0;}
+
+
+.burger-menu .navbar-toggler.active span:nth-of-type(3){
+-webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    top: -8px;}
+
+   
+
 .classycloseIcon {
   display: none;
   position: absolute;
@@ -795,6 +812,25 @@ body {
 .breakpoint-on .classy-nav {
   padding-top: 70px;
   padding-bottom: 70px;
+}
+.breakpoint-on .menu-navbar .classy-menu.menu-on {
+  left: 0;
+}
+.breakpoint-on .menu-navbar .classy-menu {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: -310px;
+  z-index: 1000;
+  width: 300px;
+  height: 100%;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  padding: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .breakpoint-on .menu-navbar .classy-menu {
   background-color: #222627;
