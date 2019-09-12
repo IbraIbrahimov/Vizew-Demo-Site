@@ -241,23 +241,33 @@ body {
   }
 }
 
-.header-news {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* min-width: 115px; */
-}
-.header-news p {
-  color: red;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
 .top-header-area .breaking-news-area {
   position: relative;
   z-index: 1;
-  padding: 10px 0;
 }
+.top-header-area .breaking-news-area .news-title {
+  min-width: 115px;
+}
+
+.top-header-area .breaking-news-area .ticker {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  padding-left: 15px;
+}
+.top-header-area .breaking-news-area .ticker ul{
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.top-header-area .breaking-news-area .ticker ul li{
+  font-weight: 500;
+  width: 100%;
+  display: none;
+}
+
+
 @media only screen and (max-width: 767px) {
   .top-header-area .breaking-news-area {
     height: 50px;
@@ -265,9 +275,7 @@ body {
   }
 }
 
-.top-header-area .breaking-news-area .news-title {
-  min-width: 115px;
-}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .top-header-area .breaking-news-area .news-title {
     min-width: 100px;
@@ -603,7 +611,7 @@ body {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.classycloseIcon .cross-wrap span.bottom {
+.classycloseIcon .cross-wrap span.button {
   bottom: 12px;
   left: 0;
   -webkit-transform: rotate(-45deg);
@@ -763,6 +771,14 @@ body {
   border-radius: 0;
   display: none;
 }
+.breakpoint-on .dd-trigger {
+  height: 38px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
 .breakpoint-off .classy-nav ul li:hover .dropdown {
   opacity: 1;
   visibility: visible;
@@ -786,6 +802,14 @@ body {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 
   transition-duration: 0.3s;
+}
+.breakpoint-on .classy-nav ul li .megamenu {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  box-shadow: none;
 }
 .classy-nav ul li .megamenu {
   position: absolute;
@@ -812,6 +836,22 @@ body {
 .breakpoint-on .classy-nav {
   padding-top: 70px;
   padding-bottom: 70px;
+}
+.breakpoint-on .classy-nav ul li {
+  display: block;
+  position: relative;
+  clear: both;
+  z-index: 10;
+}
+.breakpoint-on .classy-nav ul li .dropdown, .breakpoint-on .classy-nav ul li .megamenu {
+  display: none;
+}
+.breakpoint-on .classy-nav ul li .dropdown {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  box-shadow: none;
 }
 .breakpoint-on .menu-navbar .classy-menu.menu-on {
   left: 0;
@@ -849,6 +889,12 @@ body {
 .header-area .is-sticky .header-main-menu {
   z-index: 9999;
   box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.breakpoint-on .classy-nav ul li .megamenu .single-mega.cn-col-5, .breakpoint-on .classy-nav ul li .megamenu .single-mega.cn-col-4, .breakpoint-on .classy-nav ul li .megamenu .single-mega.cn-col-3 {
+  width: 100%;
+  border-right: none;
+  border-bottom: 1px solid #f2f4f8;
 }
 
 /* ===================================== */

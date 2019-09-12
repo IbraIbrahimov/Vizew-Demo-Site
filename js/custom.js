@@ -43,7 +43,14 @@
         });
     }
 
-  
+    if ($.fn.simpleTicker) {
+        $.simpleTicker($("#newsTicker"), {
+            speed: 1000,
+            delay: 3000,
+            easing: 'swing',
+            effectType: 'roll'
+        });
+    }
 
     // :: 6.0 Nicescroll Active Code
     if ($.fn.niceScroll) {
@@ -102,12 +109,54 @@ else{
     $(toggler).addClass('active');
     $(classyMenu).addClass('menu-on');
     
-
-   
-
 }
 
 })
+
+$('.cross-wrap').click(function(){
+
+    var burgerMenu=$('.navbar-toggler');
+
+    $(burgerMenu).removeClass('active');
+  
+    })
+    
+
+$('.dd-trigger').click(function(){
+var hasDown=$('.has-down');
+var dropdown=$('.dropdown');
+ var megaMenuItem=$('.megamenu-item');
+ var megaMenu=$('.megamenu');
+
+if($(hasDown).hasClass('active') ){
+    $(hasDown).removeClass('active');
+    $(dropdown).css('display','none');
+    
+}
+
+ else if  ( $(megaMenuItem).hasClass('active')) {
+    $(megaMenuItem).removeClass('active');
+    $(megaMenu).css('display','none');
+} 
+    
+
+else{
+    $(hasDown).addClass('active');
+    $(dropdown).css('display','block');
+    $(megaMenuItem).addClass('active');
+    $(megaMenu).css('display','block');
+}
+
+
+})
+
+
+
+
+
+
+
+
 
 $(window).resize(function(e) {
     //974
@@ -123,6 +172,10 @@ $(window).resize(function(e) {
         $(menuNavContainer).removeClass('breakpoint-on');     
     }    
   });
+
+
+
+
 
 })(jQuery);
   
