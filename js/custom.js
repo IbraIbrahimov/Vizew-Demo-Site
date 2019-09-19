@@ -149,9 +149,7 @@ $('.dd-trigger').click(function(e){
 
 
 
-
-
-$(window).resize(function(e) {
+function change(e) {
     //974
     let bodyWidth=parseInt($(document.body).css('width').replace('px',''));
     var menuNavContainer=$('.menu-nav-container');
@@ -164,9 +162,11 @@ $(window).resize(function(e) {
         $(menuNavContainer).addClass('breakpoint-off');
         $(menuNavContainer).removeClass('breakpoint-on');     
     }    
-  });
+  }
 
+$(window).resize(change);
 
+change();
 
 
 
