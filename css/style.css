@@ -46,6 +46,11 @@ p {
   line-height: 2;
   font-weight: 400;
 }
+
+button:focus{
+  box-shadow: none;
+  outline: none;
+}
 .mt-15 {
   margin-top: 15px !important;
 }

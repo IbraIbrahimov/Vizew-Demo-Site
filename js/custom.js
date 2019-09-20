@@ -22,21 +22,21 @@
 
     var browserWindow = $(window);
 
-    // :: 1.0 Preloader Active Code
+    //  1.0 Preloader Active Code
     browserWindow.on('load', function () {
         $('.preloader').fadeOut('slow', function () {
             $(this).remove();
         });
     });
 
-    // :: 2.0 Nav Active Code
+    //  Nav Active Code
     if ($.fn.classyNav) {
         $('#menu-navbar').classyNav();
     }
 
     
 
-    // :: 4.0 Sticky Active Code
+    //   Sticky Active Code
     if ($.fn.sticky) {
         $("#main-menu").sticky({
             topSpacing: 0
@@ -52,7 +52,7 @@
         });
     }
 
-    // :: 6.0 Nicescroll Active Code
+    //  Nicescroll Active Code
     if ($.fn.niceScroll) {
         $(".nav-tab").niceScroll({
             cursorcolor: "#838586",
@@ -61,7 +61,7 @@
         });
     }
 
-    // :: 7.0 ScrollUp Active Code
+    // ScrollUp Active Code
     if ($.fn.scrollUp) {
         browserWindow.scrollUp({
             scrollSpeed: 1500,
@@ -69,12 +69,12 @@
         });
     }
 
-    // :: 8.0 Tooltip Active Code
+    //  Tooltip Active Code
     if ($.fn.tooltip) {
         $('[data-toggle="tooltip"]').tooltip();
     }
 
-    // :: 9.0 CounterUp Active Code
+    //  CounterUp Active Code
     if ($.fn.counterUp) {
         $('.counter').counterUp({
             delay: 10,
@@ -82,16 +82,17 @@
         });
     }
 
-    // :: 10.0 Prevent Default a Click
+    //  Prevent Default a Click
     $('a[href="#"]').on('click', function (e) {
         e.preventDefault();
     });
 
-    // :: 11.0 Wow Active Code
+    //  Wow Active Code
     // if (browserWindow.width() > 767) {
     //     new WOW().init();
     // }
 
+    // Burger menu active code
 $(".burger-menu").click(function(event){
 
     var btn=$(event.currentTarget);
@@ -170,5 +171,78 @@ change();
 
 
 
+
+
+
+
+
 })(jQuery);
+
+// Validation form
+$(document).ready(function(){
+
+
+    let validName= false;
+    let validEmail=false;
+    let validPass=false;
+    
+    $('form').submit(function(e){
+    
+    e.preventDefault();
+    
+    let name = $('#name').val();
+    let email= $('#email').val();
+    let exampleEmail=$('#example-email1').val();
+    let examplePass= $('#example-pass1').val();
+    
+    if(!name){
+    
+        $("#name").css({'border': '2px solid red'});
+        
+    }
+    else{$("#name").css({'border': 'none'});
+        validName= true;
+    }
+    
+    
+    if(email==''){
+        $("#email").css({ 'border': '2px solid red'});
+       
+    }
+    else{$("#email").css({'border': 'none'});
+        validEmail= true;
+    }
+        
+    
+    
+          if(exampleEmail == ''){
+    
+            $("#example-email1").css({'border': '2px solid red'});
+          
+        }
+        else{ $("#example-email1").css({'border': 'none'});
+                    validEmail = true;
+        }
+        
+        
+        if(examplePass==''){
+            $("#example-pass1").css({ 'border': '2px solid red'});
+           
+        }
+        else{
+            $("#example-pass1").css({ 'border': 'none'});
+            validPass=true;
+        }
+            
+    if( (validName == true && validEmail == true) || (validPass==true && validEmail == true)){
+
+            $('form').onbind('submit').submit();
+    }
+    
+    
+    
+    });
+
+
+});
   
